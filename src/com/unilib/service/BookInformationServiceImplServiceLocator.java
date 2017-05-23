@@ -1,0 +1,142 @@
+/**
+ * BookInformationServiceImplServiceLocator.java
+ *
+ * This file was auto-generated from WSDL
+ * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
+ */
+
+package com.unilib.service;
+
+public class BookInformationServiceImplServiceLocator extends org.apache.axis.client.Service implements com.unilib.service.BookInformationServiceImplService {
+
+    public BookInformationServiceImplServiceLocator() {
+    }
+
+
+    public BookInformationServiceImplServiceLocator(org.apache.axis.EngineConfiguration config) {
+        super(config);
+    }
+
+    public BookInformationServiceImplServiceLocator(java.lang.String wsdlLoc, javax.xml.namespace.QName sName) throws javax.xml.rpc.ServiceException {
+        super(wsdlLoc, sName);
+    }
+
+    // Use to get a proxy class for BookInformationServiceImpl
+    private java.lang.String BookInformationServiceImpl_address = "http://localhost:8080/UniLib/services/BookInformationServiceImpl";
+
+    public java.lang.String getBookInformationServiceImplAddress() {
+        return BookInformationServiceImpl_address;
+    }
+
+    // The WSDD service name defaults to the port name.
+    private java.lang.String BookInformationServiceImplWSDDServiceName = "BookInformationServiceImpl";
+
+    public java.lang.String getBookInformationServiceImplWSDDServiceName() {
+        return BookInformationServiceImplWSDDServiceName;
+    }
+
+    public void setBookInformationServiceImplWSDDServiceName(java.lang.String name) {
+        BookInformationServiceImplWSDDServiceName = name;
+    }
+
+    public com.unilib.service.BookInformationServiceImpl getBookInformationServiceImpl() throws javax.xml.rpc.ServiceException {
+       java.net.URL endpoint;
+        try {
+            endpoint = new java.net.URL(BookInformationServiceImpl_address);
+        }
+        catch (java.net.MalformedURLException e) {
+            throw new javax.xml.rpc.ServiceException(e);
+        }
+        return getBookInformationServiceImpl(endpoint);
+    }
+
+    public com.unilib.service.BookInformationServiceImpl getBookInformationServiceImpl(java.net.URL portAddress) throws javax.xml.rpc.ServiceException {
+        try {
+            com.unilib.service.BookInformationServiceImplSoapBindingStub _stub = new com.unilib.service.BookInformationServiceImplSoapBindingStub(portAddress, this);
+            _stub.setPortName(getBookInformationServiceImplWSDDServiceName());
+            return _stub;
+        }
+        catch (org.apache.axis.AxisFault e) {
+            return null;
+        }
+    }
+
+    public void setBookInformationServiceImplEndpointAddress(java.lang.String address) {
+        BookInformationServiceImpl_address = address;
+    }
+
+    /**
+     * For the given interface, get the stub implementation.
+     * If this service has no port for the given interface,
+     * then ServiceException is thrown.
+     */
+    public java.rmi.Remote getPort(Class serviceEndpointInterface) throws javax.xml.rpc.ServiceException {
+        try {
+            if (com.unilib.service.BookInformationServiceImpl.class.isAssignableFrom(serviceEndpointInterface)) {
+                com.unilib.service.BookInformationServiceImplSoapBindingStub _stub = new com.unilib.service.BookInformationServiceImplSoapBindingStub(new java.net.URL(BookInformationServiceImpl_address), this);
+                _stub.setPortName(getBookInformationServiceImplWSDDServiceName());
+                return _stub;
+            }
+        }
+        catch (java.lang.Throwable t) {
+            throw new javax.xml.rpc.ServiceException(t);
+        }
+        throw new javax.xml.rpc.ServiceException("There is no stub implementation for the interface:  " + (serviceEndpointInterface == null ? "null" : serviceEndpointInterface.getName()));
+    }
+
+    /**
+     * For the given interface, get the stub implementation.
+     * If this service has no port for the given interface,
+     * then ServiceException is thrown.
+     */
+    public java.rmi.Remote getPort(javax.xml.namespace.QName portName, Class serviceEndpointInterface) throws javax.xml.rpc.ServiceException {
+        if (portName == null) {
+            return getPort(serviceEndpointInterface);
+        }
+        java.lang.String inputPortName = portName.getLocalPart();
+        if ("BookInformationServiceImpl".equals(inputPortName)) {
+            return getBookInformationServiceImpl();
+        }
+        else  {
+            java.rmi.Remote _stub = getPort(serviceEndpointInterface);
+            ((org.apache.axis.client.Stub) _stub).setPortName(portName);
+            return _stub;
+        }
+    }
+
+    public javax.xml.namespace.QName getServiceName() {
+        return new javax.xml.namespace.QName("http://service.unilib.com", "BookInformationServiceImplService");
+    }
+
+    private java.util.HashSet ports = null;
+
+    public java.util.Iterator getPorts() {
+        if (ports == null) {
+            ports = new java.util.HashSet();
+            ports.add(new javax.xml.namespace.QName("http://service.unilib.com", "BookInformationServiceImpl"));
+        }
+        return ports.iterator();
+    }
+
+    /**
+    * Set the endpoint address for the specified port name.
+    */
+    public void setEndpointAddress(java.lang.String portName, java.lang.String address) throws javax.xml.rpc.ServiceException {
+        
+if ("BookInformationServiceImpl".equals(portName)) {
+            setBookInformationServiceImplEndpointAddress(address);
+        }
+        else 
+{ // Unknown Port Name
+            throw new javax.xml.rpc.ServiceException(" Cannot set Endpoint Address for Unknown Port" + portName);
+        }
+    }
+
+    /**
+    * Set the endpoint address for the specified port name.
+    */
+    public void setEndpointAddress(javax.xml.namespace.QName portName, java.lang.String address) throws javax.xml.rpc.ServiceException {
+        setEndpointAddress(portName.getLocalPart(), address);
+    }
+
+}

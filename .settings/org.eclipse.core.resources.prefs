@@ -1,0 +1,16 @@
+eclipse.preferences.version=1
+encoding//src/com/unilib/dao/Book.java=UTF-8
+encoding//src/com/unilib/dao/Student.java=UTF-8
+encoding//src/com/unilib/model/Validation.java=UTF-8
+encoding//src/com/unilib/service/BookInformationServiceImpl.java=UTF-8
+encoding//src/com/unilib/service/BookInformationServiceImplService.java=UTF-8
+encoding//src/com/unilib/service/BookInformationServiceImplServiceLocator.java=UTF-8
+encoding//src/com/unilib/service/BookInformationServiceImplSoapBindingStub.java=UTF-8
+encoding//src/com/unilib/service/BookInventoryServiceImpl.java=UTF-8
+encoding//src/com/unilib/service/BookInventoryServiceImplService.java=UTF-8
+encoding//src/com/unilib/service/BookInventoryServiceImplServiceLocator.java=UTF-8
+encoding//src/com/unilib/service/BookInventoryServiceImplSoapBindingStub.java=UTF-8
+encoding//src/com/unilib/service/StudentServiceImpl.java=UTF-8
+encoding//src/com/unilib/service/StudentServiceImplService.java=UTF-8
+encoding//src/com/unilib/service/StudentServiceImplServiceLocator.java=UTF-8
+encoding//src/com/unilib/service/StudentServiceImplSoapBindingStub.java=UTF-8
